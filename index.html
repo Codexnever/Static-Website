@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta name="description" content="Enhance restaurant management with our powerful software. Streamline operations, manage orders, and boost efficiency. Discover the ultimate solution for restaurant success.">
+    <meta charset="utf-8">
+    <title>MedResto - Restaurant Management Software</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <link href="./public/img" rel="icon">
+    <!-- Favicon -->
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="./lib/animate/animate.min.css" rel="stylesheet">
+    <link href="./lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="./lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="./public/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="./public/css/style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-color-dark" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-xxl position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-dark btn-bg-color px-4 px-lg-5 py-3 py-lg-0" style="height: 67px;" >
+                <a href="" class="navbar-brand p-0">
+                    <!-- <h1 class="text-color-white m-0">MedResto</h1> -->
+                 
+                    <img src="./public/img/logo.png" alt="Logo" style="width: 150px; z-index:222;" >
+                </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-label="Toggle Navigation">
+    <span class="fa fa-bars"></span>
+</button>
+
+                <div class="collapse navbar-collapse" id="navbarCollapse" style="position: absolute; 
+    right: 0; " >
+                    <div class="navbar-nav ms-auto py-0 pe-4">
+                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <a href="product.html" class="nav-item nav-link">Product</a>
+                        <a href="service.html" class="nav-item nav-link">Service</a>          
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                    <!-- <a href="" class="btn btn-outline-light py-2 px-4">Book Free Demo</a> -->
+                </div>
+            </nav>
+
+<div class="container-xxl py-5  hero-header mb-5">
+    <div class="container my-5 py-5">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6 text-center text-lg-start">
+                <h1 class="display-3 text-color-white animated slideInLeft">Open Your Restaurant<br>With Technology</h1>
+                <h3 class="text-color-white animated slideInLeft mb-4 pb-2">Make Your Sale Smoother, Faster & Better With MedResto</h3>
+                <a href="contact.html" class="btn btn-outline-light py-sm-3 px-sm-5 me-3 animated slideInLeft">Book Free Demo</a>
+            </div>
+            <div class="col-lg-6 text-center text-lg-end overflow-hidden">
+                <!-- Place the canvas element here -->
+                <canvas id="plexusCanvas"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        </div>
+        <!-- Navbar & Hero End -->
+
+
+        <!-- Service Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="service-item rounded pt-3">
+                            <div class="p-4">
+                                <i class="fa fa-3x fa bi-bar-chart-fill text-color-dark mb-4" style="color: white;" ></i>
+                                <h5 style="color: white;" >Sales Management</h5>
+                                <p style="color: white;" >Manage Your Daily Weekly and Monthly sales</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="service-item rounded pt-3">
+                            <div class="p-4">
+                                <i class="fa fa-3x fa-utensils text-color-dark mb-4" style="color: white;" ></i>
+                                <h5 style="color: white;" >Ordar Management</h5>
+                                <p style="color: white;" >You can Manage Your Multiple Online & Offline Orders</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-item rounded pt-3">
+                            <div class="p-4">
+                                <i class="fa fa-3x fa-cart-plus text-color-dark mb-4" style="color: white;" ></i>
+                                <h5 style="color: white;">Stock Management</h5>
+                                <p style="color: white;" >You Can Manage Your Stocks on Dayly Weekly Yearly basis</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                        <div class="service-item rounded pt-3">
+                            <div class="p-4">
+                                <i class="fa fa-3x fa-headset text-color-dark mb-4" style="color: white;" ></i>
+                                <h5 style="color: white;">24/7 Service</h5>
+                                <p style="color: white;" >Our Team Is Available for your query or any Support</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Service End -->
+
+        <!-- About Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6">
+                        <div class="row g-3">
+                            <div class="col-6 text-start">
+                                <!-- <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.1s" src="img/about-1.jpg"> -->
+                            </div>
+                            <div class="col-6 text-start">
+                                <!-- <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.3s" src="img/about-2.jpg" style="margin-top: 25%;"> -->
+                            </div>
+                            <div class="col-6 text-end">
+                                <!-- <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.5s" src="img/about-3.jpg"> -->
+                            </div>
+                            <div class="col-6 text-end">
+                                <!-- <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.7s" src="img/about-4.jpg"> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <h5 class="section-title text-start text-color-dark fw-normal" aria-label="About Us Section" style="color: #333333;">About Us</h5>
+
+                        <h1 class="mb-4">Welcome to MedResto</h1>
+                        <p class="mb-4">At MedResto we're passionate about revolutionizing the way restaurants thrive in the digital age. With a commitment to excellence and innovation, we have been at the forefront of transforming restaurant management through cutting-edge technology.</p>
+                        <!-- <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p> -->
+                        <div class="row g-4 mb-4">
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center border-start border-5 px-3">
+                                    <h1 class="flex-shrink-0 display-5 text-color-dark mb-0" data-toggle="counter-up">3</h1>
+                                    <div class="ps-4">
+                                        <p class="mb-0">Years of</p>
+                                        <h6 class="text-uppercase mb-0">Experience</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center border-start border-5 px-3">
+                                    <h1 class="flex-shrink-0 display-5 text-color-dark mb-0" data-toggle="counter-up">478</h1>
+                                    <div class="ps-4">
+                                        <p class="mb-0">Parlour</p>
+                                        <h6 class="text-uppercase mb-0">Clients</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <a class="btn btn-bg-color py-3 px-5 mt-2" href="" style="color: #ffffff; ">Read More</a>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+
+
+        <!-- Menu Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.5s">
+                    <h5 class="section-title text-center text-color-dark fw-normal">Products</h5>
+                    <h1 class="mb-5">All Products</h1>
+                </div>
+                <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.5s">
+                    <ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5">
+                        <li class="nav-item">
+                            <a class="d-flex align-items-center text-start mx-3 ms-0 pb-3 active" data-bs-toggle="pill" href="#tab-1">
+                                <i class="fa fa-utensils fa-2x text-color-dark"></i>
+                                <div class="ps-3">
+                                    <!-- <small class="text-body">Popular</small> -->
+                                    <h6 class="mt-n1 mb-0" >Restaurant </h6>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="d-flex align-items-center text-start mx-3 pb-3" data-bs-toggle="pill" href="#tab-2">
+                                <i class="fa bi-cup-straw  fa-2x text-color-dark"></i>
+                                <div class="ps-3">
+                                    <!-- <small class="text-body">Special</small> -->
+                                    <h6 class="mt-n1 mb-0">Ice-Cream Parlour</h6>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill" href="#tab-3">
+                                <i class="fa fa-coffee fa-2x text-color-dark"></i>
+                                <div class="ps-3">
+                                    <!-- <small class="text-body">Lovely</small> -->
+                                    <h6 class="mt-n1 mb-0">Cafe</h6>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="tab-1" class="tab-pane fade show p-0 active">
+                            <div class="row g-4">
+                                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                                    <div class="service-item rounded pt-3">
+                                        <div class="p-4">
+                                            <i class="fa fa-3x fa-cart-plus text-color-dark mb-4" style="color: white;" ></i>
+                                            <h5 style="color: white;" >Restaurant</h5>
+                                            <p style="color: white;" >It is a Restaurant Management Software for managing all the restaurant operation</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                                    <div class="service-item rounded pt-3">
+                                        <div class="p-4">
+                                            <i class="fa fa-3x fa-cart-plus text-color-dark mb-4"></i>
+                                            <h5>Ice-cream Parloar</h5>
+                                            <p>It is a Ice-cream Parloar Managment Software for managing all the Ice-cream Parloar activity</p>
+                                     </div>
+                                    </div>
+                                </div> -->
+                                
+                                
+                            </div>
+                        </div>
+                        <div id="tab-2" class="tab-pane fade show p-0">
+                            <div class="row g-4">
+                                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                                    <div class="service-item rounded pt-3">
+                                        <div class="p-4">
+                                            <i class="fa fa-3x fa-cart-plus text-color-dark mb-4"></i>
+                                            <h5>Ice-Cream Parlour</h5>
+                                            <p>It is a Ice-Cream Parlour Management Software for managing all the Ice-Cream Parlour activity</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                                    <div class="service-item rounded pt-3">
+                                        <div class="p-4">
+                                            <i class="fa fa-3x fa-cart-plus text-color-dark mb-4"></i>
+                                            <h5>Online Order</h5>
+                                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                                        </div>
+                                    </div>
+                                </div> -->
+                               
+                            </div>
+                        </div>
+
+
+                        <div id="tab-3" class="tab-pane fade show p-0">
+                            <div class="row g-4">
+                                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                                    <div class="service-item rounded pt-3">
+                                        <div class="p-4">
+                                            <i class="fa fa-3x fa-cart-plus text-color-dark mb-4"></i>
+                                            <h5>Cafe</h5>
+                                            <p>It is a Cafe Management Software for managing all the Cafe activity</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                                    <div class="service-item rounded pt-3">
+                                        <div class="p-4">
+                                            <i class="fa fa-3x fa-cart-plus text-color-dark mb-4"></i>
+                                            <h5>Online Order</h5>
+                                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                                        </div>
+                                    </div>
+                                </div> -->
+                               
+                            </div>
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+        <!-- Menu End -->
+
+
+        <!-- Reservation Start -->
+
+        
+        <div class="container-xxl py-5 wow fadeInUp" id="reservation" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="text-center">
+                    <h5 class="section-title text-center text-color-dark fw-normal">Reserved Your Sit</h5>
+                    <h1 class="mb-5">Take Your Free Demo</h1>
+                    <div class="col-12">
+                        <div class="row gy-4">
+                            <div class="col-md-4">
+                                <h5 class="section-title fw-normal text-start text-color-dark">Email</h5>
+                                <p><i class="fa fa-envelope-open text-color-dark me-2"></i>medrestoinfo@gmail.com</p>
+                            </div>
+                            <div class="col-md-4">
+                                <h5 class="section-title fw-normal text-start text-color-dark">Support</h5>
+                                <p><i class="fa fa-phone-alt text-color-dark me-2"></i>+91-8421262999</p>
+                            </div>
+                            <div class="col-md-4">
+                                <h5 class="section-title  fw-normal text-start text-color-dark">Phone</h5>
+                                <p><i class="fa fa-phone-alt text-color-dark me-2"></i>+91-9579999850</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                </div>
+        <!-- Reservation Start -->
+
+
+        <!-- Team Start 
+        <div class="container-xxl pt-5 pb-3">
+            <div class="container">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h5 class="section-title text-center text-color-dark fw-normal">Team Members</h5>
+                    <h1 class="mb-5">Our Master Chefs</h1>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="team-item text-center rounded overflow-hidden">
+                            <div class="rounded-circle overflow-hidden m-4">
+                                <img class="img-fluid" src="img/team-1.jpg" alt="">
+                            </div>
+                            <h5 class="mb-0">Full Name</h5>
+                            <small>Designation</small>
+                            <div class="d-flex justify-content-center mt-3">
+                                <a class="btn btn-square btn-bg-color mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square btn-bg-color mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square btn-bg-color mx-1" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="team-item text-center rounded overflow-hidden">
+                            <div class="rounded-circle overflow-hidden m-4">
+                                <img class="img-fluid" src="img/team-2.jpg" alt="">
+                            </div>
+                            <h5 class="mb-0">Full Name</h5>
+                            <small>Designation</small>
+                            <div class="d-flex justify-content-center mt-3">
+                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="team-item text-center rounded overflow-hidden">
+                            <div class="rounded-circle overflow-hidden m-4">
+                                <img class="img-fluid" src="img/team-3.jpg" alt="">
+                            </div>
+                            <h5 class="mb-0">Full Name</h5>
+                            <small>Designation</small>
+                            <div class="d-flex justify-content-center mt-3">
+                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                        <div class="team-item text-center rounded overflow-hidden">
+                            <div class="rounded-circle overflow-hidden m-4">
+                                <img class="img-fluid" src="img/team-4.jpg" alt="">
+                            </div>
+                            <h5 class="mb-0">Full Name</h5>
+                            <small>Designation</small>
+                            <div class="d-flex justify-content-center mt-3">
+                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+         Team End -->
+
+  
+
+        <!-- Testimonial Start -->
+        <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="text-center">
+                    <h5 class="section-title text-center text-color-dark fw-normal">Feedback</h5>
+                    <h1 class="mb-5">Our Clients Say!!!</h1>
+                </div>
+                <div class="owl-carousel testimonial-carousel">
+                    <div class="testimonial-item bg-transparent border rounded p-4">
+                        <i class="fa fa-quote-left fa-2x text-color-white mb-3"></i>
+                        <p>It is a Very Nice Software and it is User Friendly Interface that is easy for restaurant staff to navigate. Simplified menu options and intuitive design can help improve efficiency.</p>
+                        <div class="d-flex align-items-center">
+                            <!-- <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-1.jpg" style="width: 50px; height: 50px;"> -->
+                            <div class="ps-3">
+                                <h5 class="mb-1">Good Luck Cafe</h5>
+                                <small>Mr.Sashikant Sagi</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item bg-transparent border rounded p-4">
+                        <i class="fa fa-quote-left fa-2x text-color-white mb-3"></i>
+                        <p>Reporting and Analytics features it is very helpfull for restaurant oner and i am very happy with this software</p>
+                        <div class="d-flex align-items-center">
+                            <!-- <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-2.jpg" style="width: 50px; height: 50px;"> -->
+                            <div class="ps-3">
+                                <h5 class="mb-1">Mahalakshmi Restaurant</h5>
+                                <small>Mr.Bharat Khare</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item bg-transparent border rounded p-4">
+                        <i class="fa fa-quote-left fa-2x text-color-white mb-3"></i>
+                        <p>I like your restaurant adviser service and software i it is working smoothly</p>
+                        <div class="d-flex align-items-center">
+                            <!-- <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-3.jpg" style="width: 50px; height: 50px;"> -->
+                            <div class="ps-3">
+                                <h5 class="mb-1">Venkat Hotel</h5>
+                                <small>Mr.Murali Venkatesan</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item bg-transparent border rounded p-4">
+                        <i class="fa fa-quote-left fa-2x text-color-white mb-3"></i>
+                        <p>I am using this software last few months and i see it is very helping and it is managing all activity</p>
+                        <div class="d-flex align-items-center">
+                            <!-- <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-4.jpg" style="width: 50px; height: 50px;"> -->
+                            <div class="ps-3">
+                                <h5 class="mb-1">5Star Cafe</h5>
+                                <small>Mr.Ashok Gollhe</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Testimonial End -->
+        
+
+        <!-- Footer Start -->
+       <div class="container-fluid btn-bg-color text-color-white footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-lg-3 col-md-6">
+                        <h4 class="section-title text-start text-color-white fw-normal mb-4">Company</h4>
+                        <a class="btn btn-link" href="about.html">About Us</a>
+                        <a class="btn btn-link" href="contact.html">Contact Us</a>
+                        <a class="btn btn-link" href="#">Reservation</a>
+                        <a class="btn btn-link" href="#">Careers</a>
+                        <!--<a class="btn btn-link" href="">Terms & Condition</a> -->
+                    </div>
+
+<div class="col-lg-3 col-md-6">
+    <h4 class="section-title text-start text-color-white fw-normal mb-4">Products</h4>
+    <a class="btn btn-link" href="./public/products/MedResto.zip" download>Restaurant</a>
+    <a class="btn btn-link download-link" href="./public/products/download?file=Cafe.zip" download>Cafe</a>
+    <a class="btn btn-link download-link" href="./public/products/download?file=IceCream.zip" download>Ice-Cream Parlour</a>
+    <a class="btn btn-link download-link" href="./public/products/download?file=jre-64.exe" download>Support JRE 64 bit</a>
+    <a class="btn btn-link download-link" href="./public/products/download?file=jre-32.exe" download>Support JRE 32 bit</a>
+    
+</div>
+                    
+
+                    <div class="col-lg-3 col-md-6">
+                        <h4 class="section-title text-start text-color-white fw-normal mb-4">Contact</h4>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Pune, Maharashtra, India</p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91-8421262999</p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91-9579999850</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>medrestoinfo@gmail.com</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href="" ><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <!-- <div class="col-lg-3 col-md-6">
+                        <h4 class="section-title text-start text-color-white fw-normal mb-4">Opening</h4>
+                        <h5 class="text-color-white fw-normal">Monday - Saturday</h5>
+                        <p>09AM - 09PM</p>
+                        <h5 class="text-color-white fw-normal">Sunday</h5>
+                        <p>10AM - 08PM</p>
+                    </div> -->
+                    <div class="col-lg-3 col-md-6">
+                        <!-- <h4 class="section-title text-start text-color-white fw-normal mb-4">Newsletter</h4>
+                        <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p> -->
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved. 
+							
+							/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/
+							Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a><br><br>
+                            Distributed By <a class="border-bottom" href="https://themewagon.com" target="_blank">ThemeWagon</a>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="">Home</a>
+                                <a href="">Cookies</a>
+                                <a href="">Help</a>
+                                <a href="">FQAs</a> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+        </div>
+        <!-- Footer End -->
+
+
+   
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./lib/wow/wow.min.js"></script>
+    <script src="./lib/easing/easing.min.js"></script>
+    <script src="./lib/waypoints/waypoints.min.js"></script>
+    <script src="./lib/counterup/counterup.min.js"></script>
+    <script src="./lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="./lib/tempusdominus/js/moment.min.js"></script>
+    <script src="./lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="./lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="./public/js/main.js"></script>
+</body>
+
+</html>
